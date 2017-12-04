@@ -1,15 +1,10 @@
 {
   "name": "reactx-icons-native",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "description": "cross platform icons, EXPO edition",
   "registry": "npm",
   "main": "",
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",
-    "tslib": "^1.8.0",
-    "warning": "^3.0.0"
-  },
+  "dependencies": {},
   "jspmPackage": true,
   "format": "umd",
   "repository": {
@@ -26,5 +21,6 @@
   "bugs": {
     "url": "https://github.com/PavelPZ/reactx-icons/issues"
   },
-  "homepage": "https://github.com/PavelPZ/reactx-icons#readme"
+  "homepage": "https://github.com/PavelPZ/reactx-icons#readme",
+  "readme": "https://github.com/PavelPZ/reactx-icons#readme"
 }

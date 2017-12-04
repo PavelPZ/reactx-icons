@@ -1,6 +1,6 @@
 {
   "name": "reactx-icons-web",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "description": "cross platform icons, WEB edition",
   "registry": "npm",
   "main": "index.js",
@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/PavelPZ/reactx-icons/issues"
   },
-  "homepage": "https://github.com/PavelPZ/reactx-icons#readme"
+  "homepage": "https://github.com/PavelPZ/reactx-icons#readme",
+  "readme": "https://github.com/PavelPZ/reactx-icons#readme"
 }
