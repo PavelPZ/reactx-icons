@@ -34,17 +34,16 @@ for (let svgFile of svgFiles) {
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var data = { path: '${path}' };
-    exports.default = data;
+    exports.${name} = '${path}';
 });
 `
 
-  fs.writeFileSync(`${outputPath}lib-web/web/${name}.js`, fileContent);
+  fs.writeFileSync(`${outputPath}lib-web/current/${name}.js`, fileContent);
 
-  webTSDef.push(`declare module 'reactx-icons/web/${name}' { const data: { path:string }; export default data }`);
+  webTSDef.push(`declare module 'reactx-icons/current/${name}' { export const ${name}: string }`);
   webEnum.push(`${name} = '${path}',`);
   nativeEnum.push(`${name} = '${value}',`);
-  nativeConst.push(`'${name}': '${value}',`);
+  nativeConst.push(`export const ${name} = '${value}';`);
 
   //fs.writeFileSync(`${outputPath}web/${name}.d.ts`, fileContent2);
 
@@ -57,7 +56,7 @@ for (let svgFile of svgFiles) {
 
 }
 
-fs.writeFileSync(`${outputPath}lib-web/index-d.d.ts`, `
+fs.writeFileSync(`${outputPath}lib-web/current/index-enum.d.ts`, `
 declare module MDI {
 const enum icons {
 ${webEnum.join('\n')}
@@ -65,11 +64,15 @@ ${webEnum.join('\n')}
 }
 `);
 
-fs.writeFileSync(`${outputPath}lib-web/index.d.ts`, `
+fs.writeFileSync(`${outputPath}lib-web/current/index-d.d.ts`, `
 ${webTSDef.join('\n')}
 `);
 
-fs.writeFileSync(`${outputPath}lib-native/index-d.d.ts`, `
+fs.writeFileSync(`${outputPath}lib-native/current/index-d.d.ts`, `
+${webTSDef.join('\n')}
+`);
+
+fs.writeFileSync(`${outputPath}lib-native/current/index-enum.d.ts`, `
 declare module MDI {
 const enum icons {
 ${nativeEnum.join('\n')}
@@ -77,9 +80,7 @@ ${nativeEnum.join('\n')}
 }
 `);
 
-  fs.writeFileSync(`${outputPath}lib-native/index.js`, `
-const icons = {
+fs.writeFileSync(`${outputPath}lib-native/current/index.js`, `
 ${nativeConst.join('\n')}
-}
-export default icons`);
+`);
 

@@ -1,11 +1,13 @@
 {
   "name": "reactx-icons-web",
-  "version": "0.1.8",
+  "version": "0.1.14",
   "description": "cross platform icons, WEB edition",
   "registry": "npm",
   "main": "index.js",
   "peerDependencies": {},
   "dependencies": {},
+  "jspmPackage": true,
+  "format": "cjs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PavelPZ/reactx-icons.git"

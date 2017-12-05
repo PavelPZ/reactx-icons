@@ -1,0 +1,41 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "system",
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "importHelpers": true,
+    "outDir": "lib-web",
+
+    "baseUrl": ".",
+    "paths": {
+      "reactx-icons/current/*": [ "lib-web/web/*" ]
+    },
+
+    //"importHelpers": true, https://github.com/facebook/react-native/issues/16858
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": false,
+    "downlevelIteration": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitReturns": true,
+    "strictFunctionTypes": false,
+
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es2015",
+      "esnext.asynciterable"
+    ]
+  },
+  "include": [ "./src/**/*" ],
+  "exclude": [
+    "jspm_packages",
+    "node_modules",
+    "lib-native",
+    "lib-web"
+  ]
+}

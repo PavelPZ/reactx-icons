@@ -1,12 +1,10 @@
 {
   "name": "reactx-icons-native",
-  "version": "0.1.8",
+  "version": "0.1.19",
   "description": "cross platform icons, EXPO edition",
   "registry": "npm",
-  "main": "",
+  "main": "current/index.js",
   "dependencies": {},
-  "jspmPackage": true,
-  "format": "umd",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PavelPZ/reactx-icons.git"

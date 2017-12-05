@@ -1,3 +1,4 @@
+
 d:
 
 rem call "c:\Program Files (x86)\Microsoft SDKs\TypeScript\2.6\tsc.exe" --p D:\rw\pavelpz\reactx-icons\tsconfig-native.json
@@ -11,3 +12,4 @@ call npm publish
 cd d:\rw\pavelpz\reactx-icons\lib-web
 call npm version patch
 call npm publish
+

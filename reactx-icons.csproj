@@ -48,12 +48,16 @@
   <ItemGroup>
     <Content Include="design\mdi-react-lm\scripts\generate-ison-per-file.js" />
     <Content Include="design\mdi-react-lm\scripts\generate.js" />
+    <Content Include="lib-native\current\index.js" />
     <Content Include="publish.cmd" />
     <Content Include="design\lib-packages\lib-native\package.json" />
     <Content Include="design\lib-packages\lib-web\package.json" />
     <None Include="design\mdi-react-lm\package.json" />
     <Content Include="design\mdi-react.cmd" />
     <Content Include="README.md" />
+    <Content Include="lib-native\package.json" />
+    <Content Include="lib-web\package.json" />
+    <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
@@ -64,7 +68,12 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="lib-native\current\index-d.d.ts" />
+    <TypeScriptCompile Include="lib-native\current\index-enum.d.ts" />
+    <TypeScriptCompile Include="lib-web\current\index-d.d.ts" />
+    <TypeScriptCompile Include="lib-web\current\index-enum.d.ts" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
