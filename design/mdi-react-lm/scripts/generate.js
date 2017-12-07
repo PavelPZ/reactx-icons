@@ -40,21 +40,11 @@ for (let svgFile of svgFiles) {
 
   fs.writeFileSync(`${outputPath}lib-web/current/${name}.js`, fileContent);
 
-  webTSDef.push(`declare module 'reactx-icons/current/${name}' { export const ${name}: string }`);
+  webTSDef.push(`declare module 'reactx-icons/current/${name}' { export const ${name}: MDI.icons }`);
   webEnum.push(`${name} = '${path}',`);
   nativeEnum.push(`${name} = '${value}',`);
-  nativeConst.push(`export const ${name} = '${value}';`);
+  nativeConst.push(`export const ${name} = '${value}' as MDI.icons`);
 
-  //fs.writeFileSync(`${outputPath}web/${name}.d.ts`, fileContent2);
-
-//  const fileContent3 =
-//    `declare const enum data {
-//  path = '${svgFile.slice(0, -4)}'
-//}
-//export default data`
-//  fs.writeFileSync(`${outputPath}native/${name}.d.ts`, fileContent3);
-
-}
 
 fs.writeFileSync(`${outputPath}lib-web/current/index-enum.d.ts`, `
 declare module MDI {

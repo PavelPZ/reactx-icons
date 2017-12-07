@@ -1,6 +1,6 @@
 {
   "name": "reactx-icons-native",
-  "version": "0.1.19",
+  "version": "0.1.23",
   "description": "cross platform icons, EXPO edition",
   "registry": "npm",
   "main": "current/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "reactx-icons-web",
-  "version": "0.1.14",
+  "version": "0.1.18",
   "description": "cross platform icons, WEB edition",
   "registry": "npm",
   "main": "index.js",
